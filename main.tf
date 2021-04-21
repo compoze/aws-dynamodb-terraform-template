@@ -10,7 +10,7 @@ terraform {
 ################################################################################
 
 resource "aws_dynamodb_table" "component-name-dynamodb" {
-  name         = "component-name"
+  name         = "${local.name}"
   billing_mode = "PAY_PER_REQUEST"
   hash_key     = "Id"
   range_key    = "Name"
